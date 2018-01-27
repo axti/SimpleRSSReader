@@ -1,7 +1,6 @@
-package com.clover.simplerssreader;
+package com.clover.simplerssreader.adapters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
@@ -12,7 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.clover.simplerssreader.R;
+import com.clover.simplerssreader.model.RssFeed;
 
 import java.util.ArrayList;
 import java.util.List;

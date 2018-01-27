@@ -1,4 +1,4 @@
-package com.clover.simplerssreader;
+package com.clover.simplerssreader.loader;
 
 /**
  * Created by aleksandrgranin on 26/01/2018.

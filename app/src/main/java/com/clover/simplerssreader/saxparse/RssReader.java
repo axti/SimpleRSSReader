@@ -1,6 +1,8 @@
-package com.clover.simplerssreader;
+package com.clover.simplerssreader.saxparse;
 
 import android.util.Log;
+
+import com.clover.simplerssreader.model.RssFeed;
 
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;

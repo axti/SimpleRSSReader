@@ -1,16 +1,16 @@
-package com.clover.simplerssreader;
+package com.clover.simplerssreader.saxparse;
 
 import android.util.Log;
+
+import com.clover.simplerssreader.model.RssFeed;
+import com.clover.simplerssreader.model.RssFeedItem;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 
 /**
  * Created by aleksandrgranin on 26/01/2018.
@@ -83,12 +83,7 @@ public class RssHandler extends DefaultHandler {
 //                    Method method = rssFeed.getClass().getMethod(methodName, String.class);
 //                    method.invoke(rssFeed, stringBuilder.toString());
                 }
-            } catch (SecurityException e) {
-            } catch (NoSuchMethodException e) {
-            } catch (IllegalArgumentException e) {
-            } catch (IllegalAccessException e) {
-            } catch (InvocationTargetException e) {
-            } catch (NoSuchFieldException e) {
+
             } catch (Exception e) {
             }
         } else if (rssItem != null) {
@@ -113,12 +108,6 @@ public class RssHandler extends DefaultHandler {
             }
             try {
                 setField(rssItem, qName, stringBuilder.toString());
-            } catch (SecurityException e) {
-            } catch (NoSuchMethodException e) {
-            } catch (IllegalArgumentException e) {
-            } catch (IllegalAccessException e) {
-            } catch (InvocationTargetException e) {
-            } catch (NoSuchFieldException e) {
             } catch (Exception e) {
             }
         }

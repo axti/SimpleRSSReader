@@ -1,7 +1,9 @@
-package com.clover.simplerssreader;
+package com.clover.simplerssreader.helper;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import com.clover.simplerssreader.R;
 
 /**
  * Created by aleksandrgranin on 26/01/2018.

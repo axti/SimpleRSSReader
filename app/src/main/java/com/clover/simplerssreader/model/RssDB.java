@@ -1,15 +1,11 @@
-package com.clover.simplerssreader;
+package com.clover.simplerssreader.model;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;
 
 import com.raizlabs.android.dbflow.annotation.Database;
-import com.raizlabs.android.dbflow.annotation.Migration;
-import com.raizlabs.android.dbflow.config.FlowManager;
 import com.raizlabs.android.dbflow.sql.language.BaseModelQueriable;
-import com.raizlabs.android.dbflow.sql.migration.BaseMigration;
 import com.raizlabs.android.dbflow.structure.BaseModel;
-import com.raizlabs.android.dbflow.structure.database.DatabaseWrapper;
 
 import java.util.List;
 
@@ -23,28 +19,6 @@ public class RssDB {
 
     public static final int VERSION = 1;
 
-   /* public static void addTestFeed() {
-        DatabaseWrapper wrapper = FlowManager.getDatabase(RssDB.class).getWritableDatabase();
-        wrapper.beginTransaction();
-
-        tryFetchNewFeed("https://www.risk.ru/rss/new");
-
-        CardsWithVolume first_card = new CardsWithVolume();
-        Long first_rfid = 14884946578172518L;
-        first_card.IKID = first_rfid;
-        first_card.rfid = first_rfid.toString();
-        first_card.Type = CardsWithVolume.SDTD_M1K;
-        first_card.save(wrapper);
-
-        CardsWithVolume second_card = new CardsWithVolume();
-        Long second_rfid = 14884946576982630L;
-        second_card.rfid = second_rfid.toString();
-        second_card.Type = CardsWithVolume.SDTD_M1K;
-        second_card.save(wrapper);
-
-        wrapper.setTransactionSuccessful();
-        wrapper.endTransaction();
-    }*/
 
     public static class DBFListLoader<T> extends AsyncTaskLoader<List<T>> {
         private BaseModelQueriable<T> query = null;

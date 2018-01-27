@@ -1,4 +1,4 @@
-package com.clover.simplerssreader;
+package com.clover.simplerssreader.activities;
 
 import android.app.LoaderManager;
 import android.content.BroadcastReceiver;
@@ -7,13 +7,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
-import android.graphics.Color;
-import android.graphics.Rect;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -29,7 +25,14 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
-import com.raizlabs.android.dbflow.sql.language.Method;
+import com.clover.simplerssreader.loader.BaseLoader;
+import com.clover.simplerssreader.helper.ItemClickSupport;
+import com.clover.simplerssreader.helper.MarginDecoration;
+import com.clover.simplerssreader.R;
+import com.clover.simplerssreader.model.RssDB;
+import com.clover.simplerssreader.model.RssFeed;
+import com.clover.simplerssreader.model.RssFeed_Table;
+import com.clover.simplerssreader.adapters.RssFeedRecyclerViewAdapter;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 
 import java.util.ArrayList;

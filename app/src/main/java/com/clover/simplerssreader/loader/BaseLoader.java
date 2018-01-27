@@ -1,4 +1,4 @@
-package com.clover.simplerssreader;
+package com.clover.simplerssreader.loader;
 
 import android.app.IntentService;
 import android.content.Context;
@@ -7,8 +7,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
+import com.clover.simplerssreader.model.RssFeed;
+
 import java.util.ArrayList;
-import java.util.List;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

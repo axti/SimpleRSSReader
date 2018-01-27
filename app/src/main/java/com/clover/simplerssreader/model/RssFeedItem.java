@@ -1,9 +1,8 @@
-package com.clover.simplerssreader;
+package com.clover.simplerssreader.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
-import android.text.TextUtils;
 
 import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.ForeignKey;

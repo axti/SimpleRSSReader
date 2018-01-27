@@ -1,10 +1,10 @@
-package com.clover.simplerssreader;
+package com.clover.simplerssreader.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
-import android.text.TextUtils;
 
+import com.clover.simplerssreader.model.RssFeedItem_Table;
 import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.OneToMany;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
@@ -42,7 +42,7 @@ public class RssFeed  extends BaseModel implements Parcelable {
     public List<RssFeedItem> feedItems;
 
     @OneToMany(methods = {OneToMany.Method.ALL})
-    List<RssFeedItem> getFeedItems() {
+    public List<RssFeedItem> getFeedItems() {
         feedItems =  SQLite.select().from(RssFeedItem.class)
                 .where(RssFeedItem_Table.feedId.eq(id)).queryList();
         return feedItems;
